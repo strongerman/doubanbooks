@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DoubanBook</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="comment">评论</string>
+    <string name="some_describe">in this layout,you can put what you want display</string>
+    <string name="search_book_hint">书名  作者</string>
+    <string name="search_reader_hint">读者 姓名 居住地 EMAIL</string>
+    <string name="book">读书</string>
+    <string name="reader">读者</string>
+    <string name="show_qr_code">个人评论主页二维码</string>
+    <string name="reader_intro">读者简介</string>
+    <string name="reading">在\t读</string>
+    <string name="write_note">写笔记</string>
+    <string name="wish">想\t读</string>
+    <string name="read">读\t过</string>
+    <string name="write_comment">写书评</string>
+    <string name="cancle_collect">取消收藏</string>
+    <string name="tag_hint">收藏标签(用空格隔开)</string>
+    <!-- <string name="comment_hint">评论内容,字数太少可能提交失败</string> -->
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="privacy_promote">仅对自己可见</string>
+    <string name="del">删除</string>
+    <string name="modify">修改</string>
+    <string name="chapName_hint">章节名(不超过100字)</string>
+    <string name="chapName">章节名</string>
+    <string name="page_no">章节页码</string>
+    <string name="page_no_hint">章节页码(不超过6位数)</string>
+    <string name="comment_hint">评论(不少于15字)</string>
+    <string name="comment_title">标题</string>
+    <string name="content">内容</string>
+
+</resources>
