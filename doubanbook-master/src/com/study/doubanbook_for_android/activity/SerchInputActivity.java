@@ -124,7 +124,7 @@ public class SerchInputActivity extends BaseActivity {
 		initListners();
 		// auto auth
 		doubanBusiness.auth();
-		search_et.setText("求魔");
+		search_et.setText("肖海");
 	}
 
 	@Override

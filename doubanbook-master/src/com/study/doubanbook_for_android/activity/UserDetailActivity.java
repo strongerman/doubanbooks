@@ -158,7 +158,7 @@ public class UserDetailActivity extends BaseActivity {
 		DebugUtils.e("CLASS", getClass().getName());
 		findViews();
 		initDatas();
-		setNavagator(userDetail.getName() + " 的个人主页");
+		setNavagator(userDetail.getName() + " 的个人中心");
 		initWidgets();
 		initListners();
 		getData();
@@ -244,7 +244,7 @@ public class UserDetailActivity extends BaseActivity {
 		if (notNull(userDetail.getDesc().trim()))
 			readerIntro_tv.setText(userDetail.getDesc());
 		else
-			readerIntro_tv.setText("  还没有个人介绍");
+			readerIntro_tv.setText("  该用户很懒，没有留下自我介绍");
 		wish_lyt.setVisibility(View.GONE);
 		read_lyt.setVisibility(View.GONE);
 		reading_lyt.setVisibility(View.GONE);
