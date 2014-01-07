@@ -16,9 +16,9 @@ public class Douban {
 	private static Douban mDoubanInstance = null;
 	public static String URL_OAUTH2_ACCESS_AUTHORIZE = "https://www.douban.com/service/auth2/auth";
 	public static String URL_OAUTH2_ACCESS_TOKEN = "https://www.douban.com/service/auth2/token";
-	public static String app_key = "012716b9167db8c30375442b43792a49";// 第三方应用的appkey
-	public static String secret = "0c3826641a1fd905";// 第三方应用的appkey
-	public static String redirecturl = "http://developers.douban.com/";// 重定向url
+	public static String app_key = "064c730fce32c06512e5592f6a98412f";// 第三方应用的appkey
+	public static String secret = "fd93c6a6a1c43591";// 第三方应用的appkey
+	public static String redirecturl = "http://mail.qq.com/cgi-bin/frame_html?sid=2lCR-yCxUc_3KRVH&r=0f608af34de253a29798057c19326678";// 重定向url
 	public static String scope = "book_basic_r,book_basic_w,douban_basic_common";
 	public static final String KEY_TOKEN = "access_token";
 	public static final String KEY_EXPIRES = "expires_in";

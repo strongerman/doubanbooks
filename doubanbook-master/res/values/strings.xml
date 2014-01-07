@@ -19,7 +19,7 @@
     <string name="write_comment">写书评</string>
     <string name="cancle_collect">取消收藏</string>
     <string name="tag_hint">收藏标签(用空格隔开)</string>
-    <!-- <string name="comment_hint">评论内容,字数太少可能提交失败</string> -->
+    <string name="comment_hint">评论内容,字数太少可能提交失败</string>
     <string name="cancel">取消</string>
     <string name="ok">确定</string>
     <string name="privacy_promote">仅对自己可见</string>
