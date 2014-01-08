@@ -87,7 +87,7 @@ public class NoteAndUserDetailActivity extends BaseActivity {
 		bigAvatar_iv = (ImageView) findViewById(R.id.bigAvatar_iv);
 		userName_tv = (TextView) findViewById(R.id.userName_tv);
 		noteHome_tv = (TextView) findViewById(R.id.noteHome_tv);
-		showQrCode_btn = (Button) findViewById(R.id.showQrCode_btn);
+//		showQrCode_btn = (Button) findViewById(R.id.showQrCode_btn);
 		comment_tv = (TextView) findViewById(R.id.comment_tv);
 		del_btn = (Button) findViewById(R.id.del_btn);
 		modify_btn = (Button) findViewById(R.id.modify_btn);

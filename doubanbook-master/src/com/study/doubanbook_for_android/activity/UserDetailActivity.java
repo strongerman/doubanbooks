@@ -30,7 +30,7 @@ import com.study.doubanbook_for_android.utils.ShowErrorUtils;
 /**
  * 1 Task has not done
  * 
- * @author tezuka-pc
+ * @author xiao-pc
  * 
  */
 public class UserDetailActivity extends BaseActivity {

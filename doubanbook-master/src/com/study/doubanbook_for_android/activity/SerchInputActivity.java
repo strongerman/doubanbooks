@@ -4,9 +4,11 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
+import android.R.color;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -33,7 +35,7 @@ import com.study.doubanbook_for_android.utils.XMLReader;
 /**
  * TODO 13-12-24 在初始页面结束时,清除所有XML的TOKEN,是否有必要清除WEBVIEW的授权凭证
  * 
- * @author tezuka-pc
+ * @author xiao-pc
  * 
  */
 public class SerchInputActivity extends BaseActivity {
@@ -133,7 +135,7 @@ public class SerchInputActivity extends BaseActivity {
 		authBtn = (Button) this.findViewById(R.id.authBtn);
 		search_et = (EditText) this.findViewById(R.id.serchContent_et);
 		search_btn = (Button) this.findViewById(R.id.search_btn);
-		clear_tv = (TextView) this.findViewById(R.id.clear_tv);
+//		clear_tv = (TextView) this.findViewById(R.id.clear_tv);
 		authBtn = (Button) this.findViewById(R.id.authBtn);
 		bookSearch = (TextView) this.findViewById(R.id.bookSearch_tv);
 		readerSearch = (TextView) this.findViewById(R.id.readerSearch_tv);
@@ -142,9 +144,11 @@ public class SerchInputActivity extends BaseActivity {
 	@Override
 	void initWidgets() {
 		super.initWidgets();
-		clear_tv.setVisibility(View.GONE);
-		// bookSearch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);// 下划线
-		readerSearch.setTextColor(Color.GRAY);
+//		clear_tv.setVisibility(View.GONE);
+		 bookSearch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);// 下划线
+		 readerSearch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+		readerSearch.setTextColor(Color.RED);
+		bookSearch.setTextColor(Color.BLACK);
 	}
 
 	@Override
@@ -177,11 +181,11 @@ public class SerchInputActivity extends BaseActivity {
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
 				String str = getText(search_et);
-				if (!str.toString().equals("")) {
-					clear_tv.setVisibility(View.VISIBLE);
-				} else {
-					clear_tv.setVisibility(View.GONE);
-				}
+//				if (!str.toString().equals("")) {
+//					clear_tv.setVisibility(View.VISIBLE);
+//				} else {
+//					clear_tv.setVisibility(View.GONE);
+//				}
 			}
 
 			@Override
@@ -195,13 +199,13 @@ public class SerchInputActivity extends BaseActivity {
 
 			}
 		});
-		clear_tv.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				search_et.setText("");
-			}
-		});
+//		clear_tv.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				search_et.setText("");
+//			}
+//		});
 
 		bookSearch.setOnClickListener(new OnClickListener() {
 
@@ -211,7 +215,7 @@ public class SerchInputActivity extends BaseActivity {
 				// 下划线
 				// readerSearch.getPaint().setFlags(Paint.););
 				bookSearch.setTextColor(Color.BLACK);
-				readerSearch.setTextColor(Color.GRAY);
+				readerSearch.setTextColor(Color.RED);
 				search_et.setHint(getResources().getString(
 						R.string.search_book_hint));
 				flag = SEARCH_BOOK;
@@ -223,10 +227,10 @@ public class SerchInputActivity extends BaseActivity {
 
 			@Override
 			public void onClick(View v) {
-				// readerSearch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);//
+				 readerSearch.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);//
 				// 下划线
 				// readerSearch.getPaint().setFlags(Paint.););
-				bookSearch.setTextColor(Color.GRAY);
+				bookSearch.setTextColor(Color.RED);
 				readerSearch.setTextColor(Color.BLACK);
 				search_et.setHint(getResources().getString(
 						R.string.search_reader_hint));

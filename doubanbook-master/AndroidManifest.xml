@@ -12,7 +12,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/douban_logol"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
@@ -46,10 +46,10 @@
             android:label="@string/app_name" >
         </activity>
         <!-- 为了测试POST与 AUTH -->
-        <activity
+        <!-- <activity
             android:name="com.study.doubanbook_for_android.activity.TextActivity1"
             android:label="@string/app_name" >
-        </activity>
+        </activity> -->
         <activity
             android:name="com.study.doubanbook_for_android.activity.BookNoteListActivity"
             android:label="@string/app_name" >

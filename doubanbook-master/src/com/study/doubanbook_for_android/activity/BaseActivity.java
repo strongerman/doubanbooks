@@ -90,7 +90,7 @@ public class BaseActivity extends Activity {
 
 	void setRightButton() {
 		showComment_btn = (Button) findViewById(R.id.showComment_btn);
-		showComment_btn.setVisibility(View.VISIBLE);
+//		showComment_btn.setVisibility(View.VISIBLE);
 		showComment_btn.setOnClickListener(new OnClickListener() {
 
 			@Override

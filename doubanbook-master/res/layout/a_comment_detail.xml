@@ -35,7 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="title"
-                        android:textColor="@color/green" />
+                        android:textColor="@color/red" />
                 </LinearLayout>
 
                 <TextView
@@ -61,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:paddingRight="8dp"
                         android:text="评论者"
-                        android:textColor="@color/blue" />
+                        android:textColor="@color/light_blue" />
 
                     <TextView
                         android:id="@+id/userName_tv"

@@ -8,7 +8,8 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/bar_all" />
+        layout="@layout/bar_all"
+        android:visibility="visible" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -112,8 +113,9 @@
                     android:id="@+id/showAllNote_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="40dip"
                     android:background="@drawable/btn_selector"
-                    android:text="查看全部笔记" />
+                    android:text="查看用户的所有读书笔记" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

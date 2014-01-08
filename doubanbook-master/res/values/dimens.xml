@@ -8,7 +8,7 @@
     <dimen name="confort_heigth">35dp</dimen>
     <dimen name="confort_heigth1">48dp</dimen>
     <dimen name="confort_width">60dp</dimen>
-    <dimen name="margin">18dp</dimen>
+    <dimen name="margin">8dp</dimen>
     <dimen name="margin_edge">8dp</dimen>
     <dimen name="small_padding">2dp</dimen>
     <dimen name="big_margin">15dp</dimen>

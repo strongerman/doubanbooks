@@ -7,8 +7,8 @@
     <string name="comment">评论</string>
     <string name="some_describe">in this layout,you can put what you want display</string>
     <string name="search_book_hint">书名  作者</string>
-    <string name="search_reader_hint">读者 姓名 居住地 EMAIL</string>
-    <string name="book">读书</string>
+    <string name="search_reader_hint">读者 姓名</string>
+    <string name="book">书籍</string>
     <string name="reader">读者</string>
     <string name="show_qr_code">个人评论主页二维码</string>
     <string name="reader_intro">读者简介</string>
@@ -32,5 +32,6 @@
     <string name="comment_hint">评论(不少于15字)</string>
     <string name="comment_title">标题</string>
     <string name="content">内容</string>
+    <string name="memo">备注： 小小豆瓣    strongerman  2014-01-08</string>
 
 </resources>

@@ -9,5 +9,5 @@
     <color name="light_blue">#800000ff</color>
     <color name="bar_color">#c0c0c0</color>
         <color name="btn_text_color">#656565</color>
-
+    <color name="mycolor">#8ee5ee</color>
 </resources>

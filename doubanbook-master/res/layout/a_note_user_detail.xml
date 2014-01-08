@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="TextView"
-                        android:textColor="@color/blue" />
+                        android:textColor="#8ee5ee" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -58,16 +58,22 @@
                             android:autoLink="web"
                             android:lines="1"
                             android:text="TextView" />
-
+<!-- 
                         <Button
                             android:id="@+id/showQrCode_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/show_qr_code" />
+                            android:text="@string/show_qr_code" /> -->
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
+            <TextView 
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   笔记："
+                android:textColor="@color/red"
+                android:textSize="20dp"/>
             <TextView
                 android:id="@+id/comment_tv"
                 android:layout_width="wrap_content"
@@ -76,17 +82,9 @@
 
             <LinearLayout
                 android:id="@+id/edit_lyt"
+                android:layout_marginTop="100dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
-                <Button
-                    android:id="@+id/del_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_selector"
-                    android:text="@string/del" />
-
                 <Button
                     android:id="@+id/modify_btn"
 					android:layout_marginLeft="@dimen/small_margin"
@@ -95,6 +93,15 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_selector"
                     android:text="@string/modify" />
+                <Button
+                    android:id="@+id/del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:text="@string/del" />
+
+                
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

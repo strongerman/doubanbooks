@@ -86,34 +86,34 @@ public class BookDetailActivity extends BaseActivity {
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.arg1) {
-			case COLLETE_DELETE_SUCCESS:
-				showDelete();
-				resetTextColor(wish, reading, done);
-				wish.setTextColor(Color.GRAY);
-				toast("取消收藏图书成功");
-				break;
-			case COLLETE_DELETE_FAILURE:
-				WrongMsg wrongmsg = (WrongMsg) msg.obj;
-				toast("取消收藏图书失败" + wrongmsg.getMsg());
-				break;
-			case COLLETE_SUCCESS:
-				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
-				if (status.equals("wish"))
-					resetTextColor(wish, reading, done);
-				else if (status.equals("reading"))
-					resetTextColor(reading, wish, done);
-				else if (status.equals("read"))
-					resetTextColor(done, reading, wish);
-				showDelete();
-				toast("收藏图书成功");
-				break;
-			case COLLETE_FAILUR:
-				showDelete();
-				toast("收藏图书失败");
-				ShowErrorUtils.showWrongMsg(context, msg);
-				break;
-			default:
-				break;
+//			case COLLETE_DELETE_SUCCESS:
+//				showDelete();
+//				resetTextColor(wish, reading, done);
+//				wish.setTextColor(Color.GRAY);
+//				toast("取消收藏图书成功");
+//				break;
+//			case COLLETE_DELETE_FAILURE:
+//				WrongMsg wrongmsg = (WrongMsg) msg.obj;
+//				toast("取消收藏图书失败" + wrongmsg.getMsg());
+//				break;
+//			case COLLETE_SUCCESS:
+//				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
+//				if (status.equals("wish"))
+//					resetTextColor(wish, reading, done);
+//				else if (status.equals("reading"))
+//					resetTextColor(reading, wish, done);
+//				else if (status.equals("read"))
+//					resetTextColor(done, reading, wish);
+//				showDelete();
+//				toast("收藏图书成功");
+//				break;
+//			case COLLETE_FAILUR:
+//				showDelete();
+//				toast("收藏图书失败");
+//				ShowErrorUtils.showWrongMsg(context, msg);
+//				break;
+//			default:
+//				break;
 			}
 		}
 	}
@@ -168,7 +168,7 @@ public class BookDetailActivity extends BaseActivity {
 				.findViewById(R.id.ratingBar_rb);
 		final EditText comment_et = (EditText) view
 				.findViewById(R.id.commentContent_et);
-
+       
 		Button cancle_btn = (Button) view.findViewById(R.id.cancle_btn);
 		Button ok_btn = (Button) view.findViewById(R.id.ok_btn);
 
@@ -256,7 +256,7 @@ public class BookDetailActivity extends BaseActivity {
 		super.findViews();
 
 		bookDetail = (LinearLayout) findViewById(R.id.bookDetail_lyt);
-		collet_lyt = (LinearLayout) findViewById(R.id.collet_lyt);
+//		collet_lyt = (LinearLayout) findViewById(R.id.collet_lyt);
 		bookImg = (ImageView) findViewById(R.id.bookImg_iv);
 		authorSumary_tv = (TextView) findViewById(R.id.authorSumary_tv);
 		bookSumary = (TextView) findViewById(R.id.bookSumary_tv);
@@ -265,13 +265,13 @@ public class BookDetailActivity extends BaseActivity {
 		price = (TextView) findViewById(R.id.bookPrice_tv);
 		publisher = (TextView) findViewById(R.id.bookPublisher_tv);
 		grade = (TextView) findViewById(R.id.bookGrade_tv);
-		wish = (Button) findViewById(R.id.wish_btn);
-		reading = (Button) findViewById(R.id.reading_btn);
-		done = (Button) findViewById(R.id.read_btn);
-		delCollect = (Button) findViewById(R.id.delCollect_btn);
+//		wish = (Button) findViewById(R.id.wish_btn);
+//		reading = (Button) findViewById(R.id.reading_btn);
+//		done = (Button) findViewById(R.id.read_btn);
+//		delCollect = (Button) findViewById(R.id.delCollect_btn);
 		comment_btn = (Button) findViewById(R.id.comment_btn);
 
-		writeNote_btn = (Button) findViewById(R.id.writeNote_btn);
+//		writeNote_btn = (Button) findViewById(R.id.writeNote_btn);
 		writeComment_btn = (Button)findViewById(R.id.writeComment_btn);
 	}
 
@@ -316,41 +316,41 @@ public class BookDetailActivity extends BaseActivity {
 		// get accessToken
 		AccessToken accessToken = KeepToken.readAccessToken(context);
 		// if not login do not show collect and wish status
-		if (!notNull(accessToken.getToken())) {
-			collet_lyt.setVisibility(View.GONE);
-		} else {
-			if (bookItem.getCurrent_user_collection() == null) {
-				resetTextColor(wish, reading, done);
-				wish.setTextColor(Color.GRAY);
-			} else {
-				String status = bookItem.getCurrent_user_collection()
-						.getStatus();
-				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
-				if (status.equals("wish")) {
-					resetTextColor(wish, reading, done);
-					hasCollecte = true;
-				} else if (status.equals("reading") || status.equals("doing")) {
-					resetTextColor(reading, wish, done);
-					hasCollecte = true;
-				} else if (status.equals("done") || status.equals("read")) {
-					resetTextColor(done, wish, reading);
-					hasCollecte = true;
-				}
-				hasCollectFirst = hasCollecte;
-			}
-			showDelete();
-		}
+//		if (!notNull(accessToken.getToken())) {
+//			collet_lyt.setVisibility(View.GONE);
+//		} else {
+//			if (bookItem.getCurrent_user_collection() == null) {
+//				resetTextColor(wish, reading, done);
+//				wish.setTextColor(Color.GRAY);
+//			} else {
+//				String status = bookItem.getCurrent_user_collection()
+//						.getStatus();
+//				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
+//				if (status.equals("wish")) {
+//					resetTextColor(wish, reading, done);
+//					hasCollecte = true;
+//				} else if (status.equals("reading") || status.equals("doing")) {
+//					resetTextColor(reading, wish, done);
+//					hasCollecte = true;
+//				} else if (status.equals("done") || status.equals("read")) {
+//					resetTextColor(done, wish, reading);
+//					hasCollecte = true;
+//				}
+//				hasCollectFirst = hasCollecte;
+//			}
+//			showDelete();
+//		}
 	}
 
 	/**
 	 * 根据hasCollect 判断是否显示删除收藏按键
 	 */
-	void showDelete() {
-		if (!hasCollecte)
-			delCollect.setVisibility(View.GONE);
-		else
-			delCollect.setVisibility(View.VISIBLE);
-	}
+//	void showDelete() {
+//		if (!hasCollecte)
+//			delCollect.setVisibility(View.GONE);
+//		else
+//			delCollect.setVisibility(View.VISIBLE);
+//	}
 
 	// 将其他两个文字颜色为灰色
 	void resetTextColor(Button btn1, Button btn2, Button btn3) {
@@ -363,56 +363,56 @@ public class BookDetailActivity extends BaseActivity {
 	void initListners() {
 		super.initListners();
 
-		wish.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				popTitleStr = getPopTitle("想读");
-				status = "wish";
-				showPop();
-			}
-		});
-		reading.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				popTitleStr = getPopTitle("在读");
-				status = "reading";
-				showPop();
-			}
-		});
-		done.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				popTitleStr = getPopTitle("在读");
-				status = "read";
-				showPop();
-			}
-		});
-		delCollect.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
-				doubanBusiness.deleteCollectBook(bookid,
-						new AsynCallback<DeleteSuccess>() {
-							@Override
-							public void onSuccess(DeleteSuccess data) {
-								super.onSuccess(data);
-								hasCollecte = false;
-								Message msg = new Message();
-								msg.arg1 = COLLETE_DELETE_SUCCESS;
-								msgHandler.sendMessage(msg);
-							}
-
-							@Override
-							public void onFailure(WrongMsg caught) {
-								super.onFailure(caught);
-								Message msg = new Message();
-								msg.arg1 = COLLETE_DELETE_FAILURE;
-								msg.obj = caught;
-								msgHandler.sendMessage(msg);
-							}
-						});
-			}
-		});
+//		wish.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				popTitleStr = getPopTitle("想读");
+//				status = "wish";
+//				showPop();
+//			}
+//		});
+//		reading.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				popTitleStr = getPopTitle("在读");
+//				status = "reading";
+//				showPop();
+//			}
+//		});
+//		done.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				popTitleStr = getPopTitle("在读");
+//				status = "read";
+//				showPop();
+//			}
+//		});
+//		delCollect.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				// 想读：wish 在读：reading 或 doing 读过：read 或 done）
+//				doubanBusiness.deleteCollectBook(bookid,
+//						new AsynCallback<DeleteSuccess>() {
+//							@Override
+//							public void onSuccess(DeleteSuccess data) {
+//								super.onSuccess(data);
+//								hasCollecte = false;
+//								Message msg = new Message();
+//								msg.arg1 = COLLETE_DELETE_SUCCESS;
+//								msgHandler.sendMessage(msg);
+//							}
+//
+//							@Override
+//							public void onFailure(WrongMsg caught) {
+//								super.onFailure(caught);
+//								Message msg = new Message();
+//								msg.arg1 = COLLETE_DELETE_FAILURE;
+//								msg.obj = caught;
+//								msgHandler.sendMessage(msg);
+//							}
+//						});
+//			}
+//		});
 		comment_btn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -424,15 +424,15 @@ public class BookDetailActivity extends BaseActivity {
 				startActivity(intent);
 			}
 		});
-		writeNote_btn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(context, NoteEditActivity.class);
-				intent.putExtra("bookItem", bookItem);
-				startActivity(intent);
-			}
-		});
+//		writeNote_btn.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent = new Intent(context, NoteEditActivity.class);
+//				intent.putExtra("bookItem", bookItem);
+//				startActivity(intent);
+//			}
+//		});
 		
 		writeComment_btn.setOnClickListener(new OnClickListener() {
 			@Override
